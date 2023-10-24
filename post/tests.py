@@ -67,7 +67,6 @@ class LikeTest(TestCase):
 class LikeAnalyticsTest(TestCase):
     def setUp(self):
         self.client = APIClient()
-        # Создайте несколько лайков с разными датами like_creation
         self.user_1 = User.objects.create_user(username='testuser_1', password='testpassword', is_staff=True)
         LastStatistics.objects.create(user=self.user_1)
 
